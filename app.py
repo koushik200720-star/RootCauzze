@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 from database.models import db
 from routes.auth import auth_bp
+from routes.machine import machine_bp
 
 app = Flask(__name__)
 
@@ -16,6 +17,7 @@ CORS(app)
 db.init_app(app)
 #register authentication routes
 app.register_blueprint(auth_bp)
+app.register_blueprint(machine_bp)
 
 # Create database tables
 with app.app_context():
