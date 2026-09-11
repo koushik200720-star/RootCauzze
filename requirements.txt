@@ -1,0 +1,16 @@
+Flask
+Flask-CORS
+Flask-SQLAlchemy
+Flask-Login
+pandas
+numpy
+scikit-learn
+scipy
+xgboost
+shap
+networkx
+plotly
+joblib
+openpyxl
+reportlab
+gunicorn
