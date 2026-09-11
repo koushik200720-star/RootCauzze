@@ -1,10 +1,9 @@
 from flask import Blueprint, request, jsonify
 from database.models import db, Machine
 
-machine_bp = Blueprint("machine", __name__, url_prefix="/api/machines")
+machine_bp = Blueprint("machine", __name__, url_prefix="/api")
 
-
-@machine_bp.route("", methods=["POST"])
+@machine_bp.route("/machines", methods=["POST"])
 def register_machine():
     data = request.get_json()
 
