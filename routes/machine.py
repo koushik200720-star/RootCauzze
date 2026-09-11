@@ -3,8 +3,10 @@ from database.models import db, Machine
 
 machine_bp = Blueprint("machine", __name__, url_prefix="/api")
 
+
 @machine_bp.route("/machines", methods=["POST"])
 def register_machine():
+
     data = request.get_json()
 
     required_fields = [
